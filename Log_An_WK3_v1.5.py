@@ -1,6 +1,6 @@
 # Hunter Joseph Connell - ISS 212 - Assignment 2
-# Resources referenced: "Help we do this assignment. I DO NOT have the log file used in the assignment,
-# so we dont actually need to make it work.(ChatGPT)
+# Resources referenced: "Help me do this assignment. I DO NOT have the log file used in the assignment,
+# so we don't actually need to make it work.(ChatGPT)
 
 
 # Function used to read the log file in the folder.
@@ -18,10 +18,14 @@ def find_security_threats(logs):
                 print("Security Threat Found: ", line.strip())
                 #looking for and returining a variable that matches the text. Removal of spaces also done.
 
+def count_log_entries(log_entries):
+    return len(log_entries) # shows how many log entries so far. Gives idea of where in the file you may find entry.
+
 # Main.
 def main():
     log_entries = read_log_file('access.log')
     if log_entries:
+        print(f"Total number of logs: {count_log_entries(log_entries)}")
         find_security_threats(log_entries) # If find_security_threats runs and finds key words it prints.
     else:
         print("No log entries found or log file is empty.")
