@@ -1,0 +1,3 @@
+Potential threat detected: fakemalwarefile.exe
+Potential threat detected: fakesuspicious.dll
+Potential threat detected: fauxphishing.docx
